@@ -1,0 +1,64 @@
+.header-container {
+	position: relative;
+}
+
+.site-header {
+	background-color: $color__palette-base;
+}
+
+.site-branding {
+	&:after { @include clearfix(); }
+
+	a {	text-decoration: none; }
+}
+
+.hello-title { 
+	margin: 0; 
+	@include breakpoint(max-width $bp-small) {
+		text-align: center;
+	}
+}
+
+.hello {
+	font-family: $font__masthead;
+	font-weight: 700;
+	color: $color__text-main;
+	@include font-size(8);
+
+	display: inline-block;
+	@include rem-fallback(margin, 3.2, 2, 2.4, 0);
+  	padding: .1em .3em;
+	line-height: 1;
+	background-color: #fff;
+	position: relative;
+
+	border-top-left-radius: .1em .06em;
+	border-bottom-right-radius: .08em .05em;
+
+	@include dialog-box(.22em, .35em, #fff, bottom, right);
+
+	@include breakpoint($bp-small) {
+		@include rem-fallback(margin-bottom, 4);
+	}
+}
+
+.hello-subtitle {
+	color: #fff;
+	font-weight: $font__main__weight;
+	@include font-size(2);
+	margin: 0 0 1em 2em;
+}
+
+.main-navigation {
+	clear: both; // make sure the primary nav appears below logo on small screens
+	text-align: center;
+}
+
+@include breakpoint($bp-small, $no-query: true) {
+	.main-navigation {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		margin-right: $grid__gutter-width / 2;
+	}
+}

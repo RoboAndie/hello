@@ -1,0 +1,45 @@
+@mixin dialog-box($height, $width, $color, $side: 'bottom', 
+	$direction: 'right', $distance: 33%) {
+	&:after {
+		position: absolute;
+		#{$direction}: $distance;
+		content: '';
+		border-style: solid;
+		border-width: 0;
+		border-color: transparent;
+
+		@if $side == 'bottom' {
+			#{$side}: -($height * .95);
+			border-top-color: $color;
+			border-top-width: $height;
+		}
+		@else if $side == 'top' {
+			#{$side}: -($height * .95);
+			border-bottom-color: $color;
+			border-bottom-width: $height;
+		}
+		@else if $side == 'left' {
+			#{$side}: -($width * .95);
+			border-right-color: $color;
+			border-right-width: $width;
+		}
+		@else if $side == 'right' {
+			#{$side}: -($width * .95);
+			border-left-color: $color;
+			border-left-width: $width;
+		}
+
+		@if $direction == 'top' {
+			border-bottom-width: $height;
+		}
+		@else if $direction == 'right' {
+			border-left-width: $width;
+		}
+		@else if $direction == 'bottom' {
+			border-top-width: $height;
+		}
+		@else if $direction == 'left' {
+			border-right-width: $width;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 $margin__vertical-medium;
+}
+
+.entry-meta {
+	font-weight: $font__main__bold-weight;
+	font-size: .8em;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-summary {
+	margin: $margin__vertical-medium 0 0;
+}
+
+//.entry-content {
+//	margin: $margin__vertical-small 0 0;
+//}
+
+.page-links {
+	clear: both;
+	margin: 0 0 $margin__vertical-medium;
+}
+
+.entry-footer a,
+.comment-metadata a {
+	margin-right: .5em;
+}

@@ -1,0 +1,12 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
+
+.entry-title {
+	font-family: $font__masthead;
+	font-weight: $font__masthead__weight;
+	@include font-size(4.5);
+	letter-spacing: 1px;
+	margin-bottom: .2em;
+	line-height: 1;
+}

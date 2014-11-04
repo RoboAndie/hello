@@ -1,0 +1,16 @@
+.container,
+.header-container,
+.footer-container,
+.main-container {
+	max-width: $size__content-max-width;
+	margin: 0 auto;
+	@include rem-fallback(padding-left,($grid__gutter-width/2));
+	@include rem-fallback(padding-right,($grid__gutter-width/2));
+
+	&:before, &:after { @include clearfix(); }
+	&:after { @include clearfix-after(); }
+}
+
+.site-main {
+	@include rem-fallback(margin-top, 2.4);
+}

@@ -1,0 +1,21 @@
+$color__comment-background: hsl(hue($color__palette-alt-1),
+	55,90);
+
+.comment-list {
+	list-style-type: none;
+	margin-left: 0;
+	@include rem-fallback(padding-left, 7);
+}
+
+.comment {
+	
+	padding: $padding-medium;
+	position: relative;
+	background-color: $color__comment-background;
+	@include dialog-box(1.8em, 1.3em, $color__comment-background, left, top, 1.7em);
+
+	.avatar {
+		position: absolute;
+		@include rem-fallback(left, -7);
+	}
+}
