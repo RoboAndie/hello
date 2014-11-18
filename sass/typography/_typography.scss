@@ -8,6 +8,10 @@ textarea {
 	font-weight: $font__main__weight;
 	@include font-size($font__size-body);
 	line-height: $font__line-height-body;
+
+	@include breakpoint($bp-small) {
+		@include font-size($font__size-body-lg);
+	}
 }
 
 @import "headings";

@@ -172,13 +172,30 @@ textarea {
   font-size: 2rem;
   line-height: 1.6;
 }
+@media (min-width: 38rem) {
+  /* line 1, sass/typography/_typography.scss */
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 23px;
+    font-size: 2.3rem;
+  }
+}
 
 /* line 1, sass/typography/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  font-weight: 600;
 }
 
-/* line 5, sass/typography/_headings.scss */
+/* line 6, sass/typography/_headings.scss */
+h1, h2 {
+  color: #7F4C82;
+}
+
+/* line 10, sass/typography/_headings.scss */
 .entry-title {
   font-family: "Yanone Kaffeesatz", Helvetica Neue, Arial, sans-serif;
   font-weight: 700;
@@ -187,6 +204,13 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   margin-bottom: .2em;
   line-height: 1;
+}
+@media (min-width: 38rem) {
+  /* line 10, sass/typography/_headings.scss */
+  .entry-title {
+    font-size: 50px;
+    font-size: 5rem;
+  }
 }
 
 /* line 1, sass/typography/_copy.scss */
@@ -489,7 +513,7 @@ textarea {
 .header-container,
 .footer-container,
 .main-container {
-  max-width: 1100px;
+  max-width: 800px;
   margin: 0 auto;
   padding-left: 15px;
   padding-left: 1.5rem;
@@ -529,20 +553,21 @@ textarea {
 --------------------------------------------------------------*/
 /* line 1, sass/navigation/_links.scss */
 a {
-  color: #EB6077;
+  color: #F25C8D;
   text-decoration: none;
-  border-bottom: 1px dotted #EB6077;
+  border-bottom: 1px solid #F25C8D;
+  transition: all .8s;
 }
-/* line 6, sass/navigation/_links.scss */
+/* line 7, sass/navigation/_links.scss */
 a:visited {
-  color: #EB6077;
+  color: #F25C8D;
 }
-/* line 9, sass/navigation/_links.scss */
+/* line 10, sass/navigation/_links.scss */
 a:hover, a:focus, a:active {
-  color: #ee778a;
+  color: #dc7295;
 }
 
-/* line 16, sass/navigation/_links.scss */
+/* line 17, sass/navigation/_links.scss */
 .entry-title a {
   border-bottom: none;
 }
@@ -601,8 +626,6 @@ a:hover, a:focus, a:active {
 .main-navigation a {
   display: block;
   text-decoration: none;
-  font-size: 20px;
-  font-size: 2rem;
   padding: 13px 2px;
   padding: 1.3rem 0.2rem;
   color: #fff;
@@ -990,8 +1013,14 @@ object {
     text-align: center;
   }
 }
+@media (min-width: 38rem) {
+  /* line 15, sass/custom/_header.scss */
+  .hello-title {
+    float: left;
+  }
+}
 
-/* line 22, sass/custom/_header.scss */
+/* line 25, sass/custom/_header.scss */
 .hello {
   font-family: "Yanone Kaffeesatz", Helvetica Neue, Arial, sans-serif;
   font-weight: 700;
@@ -1022,14 +1051,16 @@ object {
   border-left-width: 0.35em;
 }
 @media (min-width: 38rem) {
-  /* line 22, sass/custom/_header.scss */
+  /* line 25, sass/custom/_header.scss */
   .hello {
+    font-size: 90px;
+    font-size: 9rem;
     margin-bottom: 40px;
     margin-bottom: 4rem;
   }
 }
 
-/* line 45, sass/custom/_header.scss */
+/* line 49, sass/custom/_header.scss */
 .hello-subtitle {
   color: #fff;
   font-weight: 300;
@@ -1038,14 +1069,14 @@ object {
   margin: 0 0 1em 2em;
 }
 
-/* line 52, sass/custom/_header.scss */
+/* line 56, sass/custom/_header.scss */
 .main-navigation {
   clear: both;
   text-align: center;
 }
 
 @media (min-width: 38rem) {
-  /* line 58, sass/custom/_header.scss */
+  /* line 62, sass/custom/_header.scss */
   .main-navigation {
     position: absolute;
     right: 0;
@@ -1124,7 +1155,7 @@ html, body, #page {
 .comment {
   padding: 1em;
   position: relative;
-  background-color: #f4d7dc;
+  background-color: #f4d7e1;
 }
 /* line 3, sass/mixins/_mixins-theme.scss */
 .comment:after {
@@ -1135,7 +1166,7 @@ html, body, #page {
   border-width: 0;
   border-color: transparent;
   left: -1.235em;
-  border-right-color: #f4d7dc;
+  border-right-color: #f4d7e1;
   border-right-width: 1.3em;
   border-bottom-width: 1.8em;
 }

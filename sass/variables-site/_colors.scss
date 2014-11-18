@@ -1,6 +1,7 @@
 $color__palette-base: #18899A;
-$color__palette-alt-1: #EB6077;
-$color__palette-alt-2: #6D6184;
+$color__palette-alt-1: #F25C8D;
+//$color__palette-alt-2: #6D6184;
+$color__palette-alt-2: #7F4C82;
 $color__palette-neutral: #404040;
 
 $color__background-body: #fff;
@@ -15,7 +16,7 @@ $color__text-input: #666;
 $color__text-input-focus: #111;
 $color__link: $color__palette-alt-1;
 $color__link-visited: $color__link;
-$color__link-hover: lighten($color__link, 5%);
+$color__link-hover: desaturate($color__link, 25%);
 $color__text-main: #404040;
 
 $color__border-button: #ccc #ccc #bbb;

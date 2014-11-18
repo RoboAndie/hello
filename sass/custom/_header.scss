@@ -17,6 +17,9 @@
 	@include breakpoint(max-width $bp-small) {
 		text-align: center;
 	}
+	@include breakpoint($bp-small) {
+		float: left;
+	}
 }
 
 .hello {
@@ -38,6 +41,7 @@
 	@include dialog-box(.22em, .35em, #fff, bottom, right);
 
 	@include breakpoint($bp-small) {
+		@include font-size(9);
 		@include rem-fallback(margin-bottom, 4);
 	}
 }
