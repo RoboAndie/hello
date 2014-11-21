@@ -43,7 +43,7 @@ and Blueprint http://www.blueprintcss.org/
 	12.1 Captions
 	12.2 Galleries
 --------------------------------------------------------------*/
-@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700|Open+Sans:300italic,300,600);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700|Open+Sans:400italic,400,700|Bree+Serif);
 /*--------------------------------------------------------------
 1.0 Reset
 --------------------------------------------------------------*/
@@ -167,10 +167,10 @@ select,
 textarea {
   color: #404040;
   font-family: Open Sans, Helvetica Neue, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 20px;
   font-size: 2rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 @media (min-width: 38rem) {
   /* line 1, sass/typography/_typography.scss */
@@ -179,15 +179,15 @@ textarea {
   input,
   select,
   textarea {
-    font-size: 23px;
-    font-size: 2.3rem;
+    font-size: 21px;
+    font-size: 2.1rem;
   }
 }
 
 /* line 1, sass/typography/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* line 6, sass/typography/_headings.scss */
@@ -197,20 +197,12 @@ h1, h2 {
 
 /* line 10, sass/typography/_headings.scss */
 .entry-title {
-  font-family: "Yanone Kaffeesatz", Helvetica Neue, Arial, sans-serif;
+  font-family: Bree Serif, Consolas, Serif;
   font-weight: 700;
   font-size: 45px;
   font-size: 4.5rem;
-  letter-spacing: 1px;
   margin-bottom: .2em;
   line-height: 1;
-}
-@media (min-width: 38rem) {
-  /* line 10, sass/typography/_headings.scss */
-  .entry-title {
-    font-size: 50px;
-    font-size: 5rem;
-  }
 }
 
 /* line 1, sass/typography/_copy.scss */
@@ -220,7 +212,7 @@ p {
 
 /* line 5, sass/typography/_copy.scss */
 b, strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* line 9, sass/typography/_copy.scss */
@@ -244,7 +236,7 @@ pre {
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
@@ -541,8 +533,8 @@ textarea {
 
 /* line 14, sass/layout/_structure.scss */
 .site-main {
-  margin-top: 24px;
-  margin-top: 2.4rem;
+  margin-top: 35px;
+  margin-top: 3.5rem;
 }
 
 /*--------------------------------------------------------------
@@ -570,6 +562,17 @@ a:hover, a:focus, a:active {
 /* line 17, sass/navigation/_links.scss */
 .entry-title a {
   border-bottom: none;
+}
+
+/* line 27, sass/navigation/_links.scss */
+.sprite-icon {
+  background-image: url("images/sprite.png");
+}
+@media (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  /* line 27, sass/navigation/_links.scss */
+  .sprite-icon {
+    background-image: url("images/sprite2x.png");
+  }
 }
 
 /*--------------------------------------------------------------
@@ -802,7 +805,7 @@ a:hover, a:focus, a:active {
 
 /* line 9, sass/site/primary/_posts-and-pages.scss */
 .entry-meta {
-  font-weight: 600;
+  font-weight: 700;
   font-size: .8em;
 }
 
@@ -1037,33 +1040,20 @@ object {
   border-top-left-radius: .1em .06em;
   border-bottom-right-radius: .08em .05em;
 }
-/* line 3, sass/mixins/_mixins-theme.scss */
-.hello:after {
-  position: absolute;
-  right: 33%;
-  content: '';
-  border-style: solid;
-  border-width: 0;
-  border-color: transparent;
-  bottom: -0.209em;
-  border-top-color: #fff;
-  border-top-width: 0.22em;
-  border-left-width: 0.35em;
-}
 @media (min-width: 38rem) {
   /* line 25, sass/custom/_header.scss */
   .hello {
     font-size: 90px;
     font-size: 9rem;
-    margin-bottom: 40px;
-    margin-bottom: 4rem;
+    margin-bottom: 30px;
+    margin-bottom: 3rem;
   }
 }
 
 /* line 49, sass/custom/_header.scss */
 .hello-subtitle {
   color: #fff;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 20px;
   font-size: 2rem;
   margin: 0 0 1em 2em;

@@ -1,15 +1,16 @@
 // Import web fonts
-@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700|Open+Sans:300italic,300,600);
-
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700|Open+Sans:400italic,400,700|Bree+Serif);
 
 $font__main: Open Sans, Helvetica Neue, Arial, sans-serif;
-$font__main__weight: 300;
-$font__main__bold-weight: 600;
+$font__main__weight: 400; //300;
+$font__main__bold-weight: 700; //600;
 $font__masthead: 'Yanone Kaffeesatz', Helvetica Neue, Arial, sans-serif;
 $font__masthead__weight: 700;
+$font__heading: Bree Serif, Consolas, Serif; // Lora; //Droid Serif; //Merriweather;
+$font__heading__weight: 700;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
-$font__line-height-body: 1.6;
-$font__line-height-pre: 1.6;
+$font__line-height-body: 1.7;
+$font__line-height-pre: 1.7;
 $font__size-body: 2;
-$font__size-body-lg: 2.3;
+$font__size-body-lg: 2.1;

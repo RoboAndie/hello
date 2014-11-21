@@ -17,3 +17,17 @@ a {
 .entry-title a {
 	border-bottom: none;
 }
+
+
+
+
+
+$hidpi: min-resolution 1.5dppx;
+
+.sprite-icon {
+    background-image: url('images/sprite.png');
+
+    @include breakpoint($hidpi) {
+        background-image: url('images/sprite2x.png');
+    }
+}
