@@ -38,7 +38,7 @@
 	border-top-left-radius: .1em .06em;
 	border-bottom-right-radius: .08em .05em;
 
-	//@include dialog-box(.16em, .34em, #fff, bottom, right);
+	@include dialog-box(.16em, .34em, #fff, bottom, right);
 
 	@include breakpoint($bp-small) {
 		@include font-size(9);

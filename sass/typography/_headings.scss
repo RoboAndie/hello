@@ -10,7 +10,7 @@ h1, h2 {
 .entry-title {
 	font-family: $font__heading; //$font__masthead;
 	font-weight: $font__heading__weight; //$font__masthead__weight;
-	@include font-size(4.5);//@include font-size(4.5);
+	@include font-size(4.2);//@include font-size(4.5);
 	//letter-spacing: 1px;
 	margin-bottom: .2em;
 	line-height: 1;

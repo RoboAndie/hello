@@ -199,8 +199,8 @@ h1, h2 {
 .entry-title {
   font-family: Bree Serif, Consolas, Serif;
   font-weight: 700;
-  font-size: 45px;
-  font-size: 4.5rem;
+  font-size: 42px;
+  font-size: 4.2rem;
   margin-bottom: .2em;
   line-height: 1;
 }
@@ -305,7 +305,7 @@ hr {
 
 /* line 1, sass/elements/_lists.scss */
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 1.5em 1em;
 }
 
 /* line 5, sass/elements/_lists.scss */
@@ -556,7 +556,7 @@ a:visited {
 }
 /* line 10, sass/navigation/_links.scss */
 a:hover, a:focus, a:active {
-  color: #dc7295;
+  color: #d71152;
 }
 
 /* line 17, sass/navigation/_links.scss */
@@ -564,12 +564,12 @@ a:hover, a:focus, a:active {
   border-bottom: none;
 }
 
-/* line 27, sass/navigation/_links.scss */
+/* line 23, sass/navigation/_links.scss */
 .sprite-icon {
   background-image: url("images/sprite.png");
 }
 @media (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 27, sass/navigation/_links.scss */
+  /* line 23, sass/navigation/_links.scss */
   .sprite-icon {
     background-image: url("images/sprite2x.png");
   }
@@ -1039,6 +1039,19 @@ object {
   position: relative;
   border-top-left-radius: .1em .06em;
   border-bottom-right-radius: .08em .05em;
+}
+/* line 3, sass/mixins/_mixins-theme.scss */
+.hello:after {
+  position: absolute;
+  right: 33%;
+  content: '';
+  border-style: solid;
+  border-width: 0;
+  border-color: transparent;
+  bottom: -0.152em;
+  border-top-color: #fff;
+  border-top-width: 0.16em;
+  border-left-width: 0.34em;
 }
 @media (min-width: 38rem) {
   /* line 25, sass/custom/_header.scss */
