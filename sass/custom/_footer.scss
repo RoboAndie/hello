@@ -43,7 +43,9 @@ html, body, #page {
 	content: "";
 	display: block;
 }
-.site-footer, 
 .page-wrapper:after {
 	height: 9.6em; 
+}
+.site-footer {
+	min-height: 9.6em;
 }

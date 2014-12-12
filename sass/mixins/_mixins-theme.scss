@@ -43,3 +43,25 @@
 		}
 	}
 }
+
+
+
+@mixin conversation-bubble($background-color: #fff, $position: left, $has-avatar: true) {
+	background-color: $background-color;
+	@include rem-fallback(margin-#{$position}, 6);
+	@include dialog-box(1.8em, 1.3em, $background-color, $position, top, 1.7em);
+
+	@include breakpoint($bp-small) { 
+		@include rem-fallback(margin-#{$position}, 10); 
+		&:after { top: 2em; }
+	}
+
+	@if ($has-avatar == true){
+		> .comment-body > .comment-meta > .comment-author > .avatar {
+			position: absolute;
+			@include rem-fallback($position, -6);
+
+			@include breakpoint($bp-small) { @include rem-fallback($position, -10); }
+		}
+	}
+}

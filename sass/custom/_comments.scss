@@ -1,21 +1,47 @@
-$color__comment-background: hsl(hue($color__palette-alt-1),
-	55,90);
+$color__comment-background: hsl(hue($color__palette-alt-1), 55, 90);
 
 .comment-list {
-	list-style-type: none;
-	margin-left: 0;
-	@include rem-fallback(padding-left, 7);
+	&, .children {
+		list-style-type: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.children { margin-top: $margin__vertical-small; }
+
+	p { margin-bottom: 1em; }
 }
 
 .comment {
-	
+	list-style-type: none;
 	padding: $padding-medium;
+	margin-bottom: $margin__vertical-medium;
 	position: relative;
-	background-color: $color__comment-background;
-	@include dialog-box(1.8em, 1.3em, $color__comment-background, left, top, 1.7em);
 
 	.avatar {
-		position: absolute;
-		@include rem-fallback(left, -7);
+		border-radius: 50%;
+
+		@include breakpoint(max-width ($bp-small - 1)) {
+			width: 32px;
+			height: 32px;
+		}
 	}
+
+	&.depth-1, &.depth-3, &.depth-5, &.depth-7 {
+		@include conversation-bubble($color__comment-background, left, true);
+	}
+
+	&.depth-2, &.depth-4, &.depth-6, &.depth-8 {
+		@include conversation-bubble(#fff, right, true);
+	}
+}
+
+.comment-form input { max-width: 100%; }
+
+.form-allowed-tags {
+	padding: $padding-small;
+	@include font-size(1.3);
+	background-color: $color__background-pre;
+
+	code { @include font-size(1.1); }
 }

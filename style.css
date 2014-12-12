@@ -1,13 +1,11 @@
 /*
-Theme Name: _s
-Theme URI: http://underscores.me/
-Author: Automattic
-Author URI: http://automattic.com/
-Description: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Theme Name: hello
+Author: Andrea Robertson
+Author URI: http://andrearobertson.com/
+Description: simple theme for my personal blog
 Version: 1.0-wpcom
 License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: _s
+Text Domain: hello
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
@@ -548,7 +546,7 @@ a {
   color: #F25C8D;
   text-decoration: none;
   border-bottom: 1px solid #F25C8D;
-  transition: all .8s;
+  transition: color .4s;
 }
 /* line 7, sass/navigation/_links.scss */
 a:visited {
@@ -1141,27 +1139,56 @@ html, body, #page {
 }
 
 /* line 46, sass/custom/_footer.scss */
-.site-footer,
 .page-wrapper:after {
   height: 9.6em;
 }
 
-/* line 4, sass/custom/_comments.scss */
-.comment-list {
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 70px;
-  padding-left: 7rem;
+/* line 49, sass/custom/_footer.scss */
+.site-footer {
+  min-height: 9.6em;
 }
 
+/* line 4, sass/custom/_comments.scss */
+.comment-list, .comment-list .children {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
 /* line 10, sass/custom/_comments.scss */
+.comment-list .children {
+  margin-top: 0.3em;
+}
+/* line 12, sass/custom/_comments.scss */
+.comment-list p {
+  margin-bottom: 1em;
+}
+
+/* line 15, sass/custom/_comments.scss */
 .comment {
+  list-style-type: none;
   padding: 1em;
+  margin-bottom: 1.5em;
   position: relative;
+}
+/* line 21, sass/custom/_comments.scss */
+.comment .avatar {
+  border-radius: 50%;
+}
+@media (max-width: 37rem) {
+  /* line 21, sass/custom/_comments.scss */
+  .comment .avatar {
+    width: 32px;
+    height: 32px;
+  }
+}
+/* line 30, sass/custom/_comments.scss */
+.comment.depth-1, .comment.depth-3, .comment.depth-5, .comment.depth-7 {
   background-color: #f4d7e1;
+  margin-left: 60px;
+  margin-left: 6rem;
 }
 /* line 3, sass/mixins/_mixins-theme.scss */
-.comment:after {
+.comment.depth-1:after, .comment.depth-3:after, .comment.depth-5:after, .comment.depth-7:after {
   position: absolute;
   top: 1.7em;
   content: '';
@@ -1173,11 +1200,90 @@ html, body, #page {
   border-right-width: 1.3em;
   border-bottom-width: 1.8em;
 }
-/* line 17, sass/custom/_comments.scss */
-.comment .avatar {
+@media (min-width: 38rem) {
+  /* line 30, sass/custom/_comments.scss */
+  .comment.depth-1, .comment.depth-3, .comment.depth-5, .comment.depth-7 {
+    margin-left: 100px;
+    margin-left: 10rem;
+  }
+  /* line 56, sass/mixins/_mixins-theme.scss */
+  .comment.depth-1:after, .comment.depth-3:after, .comment.depth-5:after, .comment.depth-7:after {
+    top: 2em;
+  }
+}
+/* line 60, sass/mixins/_mixins-theme.scss */
+.comment.depth-1 > .comment-body > .comment-meta > .comment-author > .avatar, .comment.depth-3 > .comment-body > .comment-meta > .comment-author > .avatar, .comment.depth-5 > .comment-body > .comment-meta > .comment-author > .avatar, .comment.depth-7 > .comment-body > .comment-meta > .comment-author > .avatar {
   position: absolute;
-  left: -70px;
-  left: -7rem;
+  left: -60px;
+  left: -6rem;
+}
+@media (min-width: 38rem) {
+  /* line 60, sass/mixins/_mixins-theme.scss */
+  .comment.depth-1 > .comment-body > .comment-meta > .comment-author > .avatar, .comment.depth-3 > .comment-body > .comment-meta > .comment-author > .avatar, .comment.depth-5 > .comment-body > .comment-meta > .comment-author > .avatar, .comment.depth-7 > .comment-body > .comment-meta > .comment-author > .avatar {
+    left: -100px;
+    left: -10rem;
+  }
+}
+/* line 34, sass/custom/_comments.scss */
+.comment.depth-2, .comment.depth-4, .comment.depth-6, .comment.depth-8 {
+  background-color: #fff;
+  margin-right: 60px;
+  margin-right: 6rem;
+}
+/* line 3, sass/mixins/_mixins-theme.scss */
+.comment.depth-2:after, .comment.depth-4:after, .comment.depth-6:after, .comment.depth-8:after {
+  position: absolute;
+  top: 1.7em;
+  content: '';
+  border-style: solid;
+  border-width: 0;
+  border-color: transparent;
+  right: -1.235em;
+  border-left-color: #fff;
+  border-left-width: 1.3em;
+  border-bottom-width: 1.8em;
+}
+@media (min-width: 38rem) {
+  /* line 34, sass/custom/_comments.scss */
+  .comment.depth-2, .comment.depth-4, .comment.depth-6, .comment.depth-8 {
+    margin-right: 100px;
+    margin-right: 10rem;
+  }
+  /* line 56, sass/mixins/_mixins-theme.scss */
+  .comment.depth-2:after, .comment.depth-4:after, .comment.depth-6:after, .comment.depth-8:after {
+    top: 2em;
+  }
+}
+/* line 60, sass/mixins/_mixins-theme.scss */
+.comment.depth-2 > .comment-body > .comment-meta > .comment-author > .avatar, .comment.depth-4 > .comment-body > .comment-meta > .comment-author > .avatar, .comment.depth-6 > .comment-body > .comment-meta > .comment-author > .avatar, .comment.depth-8 > .comment-body > .comment-meta > .comment-author > .avatar {
+  position: absolute;
+  right: -60px;
+  right: -6rem;
+}
+@media (min-width: 38rem) {
+  /* line 60, sass/mixins/_mixins-theme.scss */
+  .comment.depth-2 > .comment-body > .comment-meta > .comment-author > .avatar, .comment.depth-4 > .comment-body > .comment-meta > .comment-author > .avatar, .comment.depth-6 > .comment-body > .comment-meta > .comment-author > .avatar, .comment.depth-8 > .comment-body > .comment-meta > .comment-author > .avatar {
+    right: -100px;
+    right: -10rem;
+  }
+}
+
+/* line 39, sass/custom/_comments.scss */
+.comment-form input {
+  max-width: 100%;
+}
+
+/* line 41, sass/custom/_comments.scss */
+.form-allowed-tags {
+  padding: 0.5em;
+  font-size: 13px;
+  font-size: 1.3rem;
+  background-color: #eee;
+}
+/* line 46, sass/custom/_comments.scss */
+.form-allowed-tags code {
+  font-size: 11px;
+  font-size: 1.1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
