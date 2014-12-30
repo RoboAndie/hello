@@ -67,4 +67,13 @@
   #{$property}: $remValues; 
 }
 
+@mixin text-hide() {
+  font: #{0/0} a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+@import "mixins-grids";
 @import "mixins-theme";

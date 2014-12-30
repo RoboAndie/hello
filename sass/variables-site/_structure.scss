@@ -4,6 +4,8 @@ $size__site-sidebar: 25%;
 $size__content-max-width: 800px;
 
 $grid__gutter-width: 3rem;
+$grid-gutter-width: $grid__gutter-width; // for bootstrap grids
+$grid-columns: 12;
 
 $margin__vertical-medium: 1.5em;
 $margin__vertical-small: .3em;
